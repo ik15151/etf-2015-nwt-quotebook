@@ -5,7 +5,7 @@
 
 *Za šta se koristi?*
 
-Quotebook je kolekcija citata prilagođena upravo onom pojedincu koji je koristi. Shodno tome, svaka individua odabire u koje svrhe i koje citate želi sačuvati, organizovati, a po želji i podijeliti sa drugima.
+Quotebook je kolekcija citata prilagođena upravo onom pojedincu koji je koristi. Shodno tome, svaki korisnik odabire u koje svrhe i koje citate želi sačuvati, organizovati, a po želji i podijeliti sa drugima.
 
 Za ljubitelje citata više nema potrebe za slanjem emailova samom sebi, izgubljenih i razasutih stikera, te nepreglednih dokumenata.
 Quotebook ima za cilj da olakša sakupljanje (dodavanje), centralizovanje, pretragu i pregled citata bilo koje vrste: izreke poznatih ličnosti, dirljivi izrazi djece, citati iz stručne literature, podvučene rečenice iz omiljene knjige...
