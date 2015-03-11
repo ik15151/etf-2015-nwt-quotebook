@@ -1,5 +1,4 @@
 # nwt
-Quotebook - notebook for quotes
 
 *Opis i upotreba*
 
@@ -35,3 +34,9 @@ Za pripremu predavanja/debata, referencirajući se na ranije spašene citate iz 
 - Svi
 
 Kao izvor inspirativnih i motivacionih izreka značajnih upravo njihovoj ličnosti.
+
+
+*Dokumentacija:*
+https://github.com/ik15151/nwt/wiki/Dokumentacija
+
+
