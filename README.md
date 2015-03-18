@@ -13,15 +13,15 @@ Odlika ove aplikacije jeste da ne dolazi popunjena citatima, već omogućava kor
 
 **Ko koristi?**
 
-- Roditelji: Kako bi zabilježili emotivne, smiješne i posebne izreke svoje djece ili druge značajne porodične trenutke.
+- Roditelji: kako bi zabilježili emotivne, smiješne i posebne izreke svoje djece ili druge značajne porodične trenutke.
 
-- Studenti: Prilikom pretraživanja i rada na studentskim esejima, seminarskim radovima, stručnim i naučnim radovima, člancima...
+- Studenti: prilikom pretraživanja i rada na studentskim esejima, seminarskim radovima, stručnim i naučnim radovima, člancima...
 
-- Pisci: U trenucima inspiracije za bilješke ideja za svoja djela.
+- Pisci: u trenucima inspiracije za bilješke ideja za svoja djela.
 
-- Govornici: Za pripremu predavanja/debata, referencirajući se na ranije spašene citate iz relevantnih izvora (knjiga, predavanja...) kao vid argumentacije.
+- Govornici: za pripremu predavanja/debata, referencirajući se na ranije spašene citate iz relevantnih izvora (knjiga, predavanja...) kao vid argumentacije.
 
-- Svi: Kao izvor inspirativnih i motivacionih izreka značajnih upravo njihovoj ličnosti.
+- Svi: kao izvor inspirativnih i motivacionih izreka značajnih upravo njihovoj ličnosti.
 
 
 **Dokumentacija:**
