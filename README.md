@@ -5,9 +5,12 @@
 
 *Za šta se koristi?*
 
-_It’s a place to store and share your favorite quotes._
+It’s a place to store and share your favorite quotes.
+
 Collect quotes that inspire YOU.
+
 Keep your quote collection organized.
+
 
 Quotebook je lična kolekcija citata. 
 Svaki korisnik odabire u koje svrhe i koje citate želi sačuvati, organizovati, a po želji i podijeliti sa drugima.
