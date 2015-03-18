@@ -5,19 +5,24 @@
 
 *Za šta se koristi?*
 
-Quotebook je kolekcija citata prilagođena upravo onom pojedincu koji je koristi. Shodno tome, svaki korisnik odabire u koje svrhe i koje citate želi sačuvati, organizovati, a po želji i podijeliti sa drugima.
+It’s a place to store and share your favorite quotes.
+Collect quotes that inspire YOU.
+Keep your quote collection organized.
+
+Quotebook je lična kolekcija citata. 
+Svaki korisnik odabire u koje svrhe i koje citate želi sačuvati, organizovati, a po želji i podijeliti sa drugima.
 
 Za ljubitelje citata više nema potrebe za slanjem emailova samom sebi, izgubljenih i razasutih stikera, te nepreglednih dokumenata.
 Quotebook ima za cilj da olakša sakupljanje (dodavanje), centralizovanje, pretragu i pregled citata bilo koje vrste: izreke poznatih ličnosti, dirljivi izrazi djece, citati iz stručne literature, podvučene rečenice iz omiljene knjige...
 
-Odlika ove aplikacije jeste da ne dolazi napunjena predefinisanim citatima, već omogućava korisniku da pravi vlastitu kolekciju ideja koje se njega tiču.
+Odlika ove aplikacije jeste da ne dolazi popunjena citatima, već omogućava korisniku da pravi vlastitu kolekciju ideja koje se njega tiču.
 
 
 *Ko koristi?*
 
 - Roditelji
 
-Kako bi zabilježili dirljive, smiješne i posebne izreke svoje djece ili druge značajne porodične trenutke.
+Kako bi zabilježili emotivne, smiješne i posebne izreke svoje djece ili druge značajne porodične trenutke.
 
 - Studenti
 
