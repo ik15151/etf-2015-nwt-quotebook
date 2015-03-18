@@ -5,7 +5,7 @@
 
 *Za šta se koristi?*
 
-It’s a place to store and share your favorite quotes.
+_It’s a place to store and share your favorite quotes._
 Collect quotes that inspire YOU.
 Keep your quote collection organized.
 
