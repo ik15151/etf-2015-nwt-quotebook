@@ -7,7 +7,5 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
-  belongs_to :privilege
-  has_many :password_recovery_tokens
   has_many :categories
 end
