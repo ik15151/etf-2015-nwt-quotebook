@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      flash[:success] = "Welcome to the Quotebook!"
       redirect_to @user # equivalent: redirect_to user_url(@user)
     else
       render 'new'
