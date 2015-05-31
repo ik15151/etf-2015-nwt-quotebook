@@ -33,5 +33,9 @@ class User < ActiveRecord::Base
     # without self the assignment would create a local variable called remember_token, which isn’t what we want
     update_attribute(:remember_digest, User.digest(remember_token))
   end
-    
+  
+  # Returns true if the given token matches the digest.
+  def authenticated?(remember_token)
+    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  end  
 end
