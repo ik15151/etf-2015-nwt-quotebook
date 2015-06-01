@@ -6,6 +6,9 @@ gem 'rails', '4.2.1'
 # Hash function for has_secure_password (password_digest)
 gem 'bcrypt', '3.1.10'
 
+# Faker gem will allow us to make sample users with semi-realistic names and email addresses
+gem 'faker', '1.4.2'
+
 # Bootstrap
 gem 'bootstrap-sass', '3.2.0.0'
 
