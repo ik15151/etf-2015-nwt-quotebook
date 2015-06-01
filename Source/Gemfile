@@ -9,6 +9,10 @@ gem 'bcrypt', '3.1.10'
 # Faker gem will allow us to make sample users with semi-realistic names and email addresses
 gem 'faker', '1.4.2'
 
+# Pagination
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 # Bootstrap
 gem 'bootstrap-sass', '3.2.0.0'
 
