@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   
@@ -18,6 +22,7 @@ Rails.application.routes.draw do
   
   resources :users
   resources :account_activations, only: [:edit]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :authors
   
   # Example of regular route:
