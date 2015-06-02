@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   
   resources :users
+  resources :account_activations, only: [:edit]
   resources :authors
   
   # Example of regular route:
