@@ -70,9 +70,9 @@ Rails.application.configure do
     :address        => 'smtp.gmail.com',
     :port           => '587',
     :authentication => :plain,
-    :user_name      => "etfvideonadzor@gmail.com",
+    :user_name      => "etfvideonadzor",
     :password       => "videonadzorroot",
-    :domain         => 'heroku.com',
+    :domain         => 'gmail.com',
     :enable_starttls_auto => true
   }
 
