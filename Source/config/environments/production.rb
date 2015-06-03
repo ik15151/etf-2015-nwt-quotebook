@@ -77,7 +77,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
-  
   Rails.application.routes.default_url_options[:host] = 'qbook.herokuapp.com'
 
   ActionMailer::Base.delivery_method = :smtp
@@ -88,6 +87,6 @@ Rails.application.configure do
       user_name:            'etfvideonadzor',
       password:             'videonadzorroot',
       authentication:       'plain',
-      enable_starttls_auto: true  }
-  
+      enable_starttls_auto: true  } 
+       
 end
