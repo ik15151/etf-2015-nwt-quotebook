@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   
   has_secure_password
   
-  has_many :categories
+  # has_many :categories
   
   # Returns the hash digest of the given string.
   def User.digest(string)
