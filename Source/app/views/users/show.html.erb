@@ -8,4 +8,13 @@
       </h1>
     </section>
   </aside>
+  <div class="col-md-8">
+    <% if @user.quotes.any? %>
+      <h3>Quotes (<%= @user.quotes.count %>)</h3>
+      <ol class="quotes">
+        <%= render @quotes %>
+      </ol>
+      <%= will_paginate @quotes %>
+    <% end %>
+  </div>
 </div>
