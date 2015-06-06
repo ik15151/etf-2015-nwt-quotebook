@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   
   has_secure_password
   
-  has_many :quotes
+  has_many :quotes, dependent: :destroy
   
   # Returns the hash digest of the given string.
   def User.digest(string)

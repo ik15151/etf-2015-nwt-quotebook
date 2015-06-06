@@ -3,6 +3,8 @@ class Quote < ActiveRecord::Base
   belongs_to :author
   has_and_belongs_to_many :tags
   
+  default_scope -> { order(created_at: :desc) }
+
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 3000 }
   validates :source, length: { maximum: 200 }
