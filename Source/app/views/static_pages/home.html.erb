@@ -18,15 +18,10 @@
     <h1>Welcome to the Quotebook</h1>
 
     <h2>
-      This is the home page for the <%= link_to "Quotebook",   root_path %> application.
+      This is the home page for the
+      <a href="https://qbook.herokuapp.com/">Quotebook</a> application.
     </h2>
 
-    <%= link_to "Sign up!", signup_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "Sign up", signup_path, class: "btn btn-lg btn-primary" %>
   </div>
-
-  <%= link_to image_tag("logo1.png", alt: "Quotebook logo 1"),
-		            'http://qbook.herokuapp.com/' %>
-		            
-  <%= link_to image_tag("logo2.png", alt: "Quotebook logo 2"),
-		            'http://qbook.herokuapp.com/' %>
 <% end %>
