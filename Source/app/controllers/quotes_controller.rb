@@ -1,5 +1,6 @@
 class QuotesController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
+  before_action :correct_user,   only: :destroy
 
   def create
     @quote = current_user.quotes.build(quote_params)
@@ -13,11 +14,19 @@ class QuotesController < ApplicationController
   end
 
   def destroy
+    @quote.destroy
+    flash[:success] = "Quote deleted."
+    redirect_to request.referrer || root_url
   end
 
   private
 
     def quote_params
       params.require(:quote).permit(:content)
+    end
+    
+    def correct_user
+      @quote = current_user.quotes.find_by(id: params[:id])
+      redirect_to root_url if @quote.nil?
     end
 end
