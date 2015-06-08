@@ -2,12 +2,18 @@
   <%= link_to gravatar_for(quote.user, size: 50), quote.user %>
   <span class="user"><%= link_to quote.user.name, quote.user %></span>
   <div class="content">
-	  <div class="panel panel-info">
+	  <blockquote>
+	  	<p><%= quote.content %></p>
+  		<small><b>Author: </b> Someone famous</small>
+  		<small><b>Source: </b> <cite title="Source Title"><%= quote.source %></cite></small>
+	  	
+	  	<!--
 	  	<div class="panel-heading center">Author</div>
 	  	<div class="panel-body"><%= quote.content %></div>
 	  	<div class="panel-footer"><b>Source:</b> <%= quote.source %></div>
 	  	<div class="panel-footer"><b>Tags:</b> tag1, tag2, tag3</div>
-	  </div>
+	  	-->
+	  </blockquote>	  
   </div>
   <span class="comment"><%= quote.comment %></span>
   <span class="timestamp">
