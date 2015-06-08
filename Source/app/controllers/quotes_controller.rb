@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
-  before_action :correct_user,   only: :destroy
+  before_action :logged_in_user, only: [:create, :edit, :update, :destroy]
+  before_action :correct_user,   only: [:edit, :update, :destroy]
 
   def create
     @quote = current_user.quotes.build(quote_params)
@@ -14,14 +14,13 @@ class QuotesController < ApplicationController
   end
   
   def edit
-    @quote = Quote.find(params[:id])
   end
   
   def update
-    @quote = Quote.find(params[:id])
-    if @quote.update_attributes(user_params)
-      flash[:success] = "Quote updated"
-      redirect_to @quote
+    #@quote = Quote.find(params[:id])
+    if @quote.update_attributes(quote_params)
+      flash[:success] = "Quote updated."
+      redirect_to root_url
     else
       render 'edit'
     end

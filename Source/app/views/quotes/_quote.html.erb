@@ -16,7 +16,7 @@
       <%= link_to "Delete", quote, method: :delete,
                                        data: { confirm: "You sure?" } %>
        · 
-      <%= link_to "Edit", quote, method: :edit %>
+      <%= link_to "Edit", edit_quote_path(quote) %>
     <% end %>
   </span>
 </li>
