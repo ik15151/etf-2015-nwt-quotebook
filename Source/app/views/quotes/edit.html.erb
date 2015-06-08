@@ -1,0 +1,24 @@
+<% provide(:title, "Edit quote") %>
+<h1>Update quote</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">    
+	<%= form_for(@quote) do |f| %>
+	  <%= render 'shared/error_messages', object: f.object %>
+	  <
+	  <div class="field">
+	  	<%= f.label :content, "Quote" %>
+	    <%= f.text_area :content, class: "form-control" %>
+	  </div>  
+	  <div class="field">
+	  	<%= f.label :source, "Source" %>
+	    <%= f.text_field :source, class: "form-control" %>
+	  </div>
+	  <div class="field">
+	  	<%= f.label :comment, "Comment" %>
+	    <%= f.text_area :comment, class: "form-control" %>
+	  </div>
+	  <%= f.submit "Save changes", class: "btn btn-info" %>
+	<% end %>    
+  </div>
+</div>

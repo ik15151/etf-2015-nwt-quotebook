@@ -1,12 +1,22 @@
 <li id="quote-<%= quote.id %>">
   <%= link_to gravatar_for(quote.user, size: 50), quote.user %>
   <span class="user"><%= link_to quote.user.name, quote.user %></span>
-  <span class="content"><%= quote.content %></span>
+  <div class="content">
+	  <div class="panel panel-info">
+	  	<div class="panel-heading center">Author</div>
+	  	<div class="panel-body"><%= quote.content %></div>
+	  	<div class="panel-footer"><b>Source:</b> <%= quote.source %></div>
+	  	<div class="panel-footer"><b>Tags:</b> tag1, tag2, tag3</div>
+	  </div>
+  </div>
+  <span class="comment"><%= quote.comment %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(quote.created_at) %> ago.
     <% if current_user?(quote.user) %>
-      <%= link_to "delete", quote, method: :delete,
+      <%= link_to "Delete", quote, method: :delete,
                                        data: { confirm: "You sure?" } %>
+       · 
+      <%= link_to "Edit", quote, method: :edit %>
     <% end %>
   </span>
 </li>

@@ -12,6 +12,20 @@ class QuotesController < ApplicationController
       render 'static_pages/home'
     end
   end
+  
+  def edit
+    @quote = Quote.find(params[:id])
+  end
+  
+  def update
+    @quote = Quote.find(params[:id])
+    if @quote.update_attributes(user_params)
+      flash[:success] = "Quote updated"
+      redirect_to @quote
+    else
+      render 'edit'
+    end
+  end
 
   def destroy
     @quote.destroy
@@ -22,7 +36,7 @@ class QuotesController < ApplicationController
   private
 
     def quote_params
-      params.require(:quote).permit(:content)
+      params.require(:quote).permit(:content, :source, :comment)
     end
     
     def correct_user

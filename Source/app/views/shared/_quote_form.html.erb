@@ -1,7 +1,20 @@
 <%= form_for(@quote) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new quote..." %>
+  	<%= f.label :author, "Author" %> <!-- Nije f za autora? -->
+    <%= f.text_field :author, class: "form-control" %>
   </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
+  <div class="field">
+  	<%= f.label :content, "Quote" %>
+    <%= f.text_area :content, class: "form-control" %>
+  </div>  
+  <div class="field">
+  	<%= f.label :source, "Source" %>
+    <%= f.text_field :source, class: "form-control" %>
+  </div>
+  <div class="field">
+  	<%= f.label :comment, "Comment" %>
+    <%= f.text_area :comment, class: "form-control" %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-info" %>
 <% end %>

@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   get 'password_resets/new'
-
   get 'password_resets/edit'
 
   # You can have the root of your site routed with "root"
@@ -27,7 +26,7 @@ Rails.application.routes.draw do
   end
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
-  resources :quotes,          only: [:create, :destroy]
+  resources :quotes,              only: [:create, :edit, :update, :destroy]
   resources :relationships,       only: [:create, :destroy]
   resources :authors
   
