@@ -1,0 +1,25 @@
+<% provide(:title, @author.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section">
+      <h3 class="center">
+        <%= @author.name %>
+      </h3>
+      <h2><b>Biography</b> </h2>      
+      <span style="white-space: pre-wrap;">
+      	<%= @author.biography %>
+      </span>
+    </section>
+    <br />
+    <%= link_to " ", edit_author_path(@author), class: "btn btn-primary glyphicon glyphicon-pencil" %>      
+  </aside>
+  <div class="col-md-8">
+    <% if @author.quotes.any? %>
+      <h3>Quotes (<%= @author.quotes.count %>)</h3>
+      <ol class="quotes">
+        <%= render @quotes %>
+      </ol>
+      <%= will_paginate @quotes %>
+    <% end %>
+  </div>
+</div>

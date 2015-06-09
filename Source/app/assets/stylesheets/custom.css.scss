@@ -4,7 +4,7 @@
 @import "bootstrap-sprockets";
 
 // Import cerulean variables
-@import "bootswatch/spacelab/variables";
+@import "bootswatch/united/variables";
 
 // Then bootstrap itself
 @import "bootstrap";
@@ -13,7 +13,7 @@
 body { padding-top: 60px; }
 
 // And finally bootswatch style itself
-@import "bootswatch/spacelab/bootswatch";
+@import "bootswatch/united/bootswatch";
 
 
 /* mixins, variables, etc. */
@@ -256,6 +256,18 @@ input {
 /* Users index */
 
 .users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/* Authors index */
+
+.authors {
   list-style: none;
   margin: 0;
   li {
