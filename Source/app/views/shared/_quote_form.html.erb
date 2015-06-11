@@ -1,13 +1,13 @@
 <%= form_for(@quote) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
-  	<%= f.label :author, "Author" %> <!-- Nije f za autora? -->
-    <%= f.text_field :author, class: "form-control" %>
-  </div>
+  <%= render 'shared/error_messages', object: f.object %>  
   <div class="field">
   	<%= f.label :content, "Quote" %>
     <%= f.text_area :content, class: "form-control" %>
-  </div>  
+  </div>
+  <div class="field">
+  	<%= f.label :author, "Author" %> <!-- Nije f za autora? -->
+    <%= f.text_field :author, class: "form-control" %>
+  </div> 
   <div class="field">
   	<%= f.label :source, "Source" %>
     <%= f.text_field :source, class: "form-control" %>

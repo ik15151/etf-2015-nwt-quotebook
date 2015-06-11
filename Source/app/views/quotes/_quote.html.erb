@@ -3,8 +3,8 @@
   <span class="user"><%= link_to quote.user.name, quote.user %></span>
   <div class="content">
 	  <blockquote>
-	  	<p><%= quote.content %></p>
-  		<small><b>Author: </b> Someone famous</small>
+	  	<p><%= quote.content %></p>	 	
+  		<small><b>Author: </b><%= link_to quote.author, quote.author %></small>
   		<small><b>Source: </b> <cite title="Source Title"><%= quote.source %></cite></small>
 	  </blockquote>	  
   </div>
