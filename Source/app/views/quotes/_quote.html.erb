@@ -4,7 +4,7 @@
   <div class="content">
 	  <blockquote>
 	  	<p><%= quote.content %></p>	 	
-  		<small><b>Author: </b><%= link_to quote.author, quote.author %></small>
+  		<small><b>Author: </b><%= link_to quote.author.try(:name), quote.author %></small>
   		<small><b>Source: </b> <cite title="Source Title"><%= quote.source %></cite></small>
 	  </blockquote>	  
   </div>
