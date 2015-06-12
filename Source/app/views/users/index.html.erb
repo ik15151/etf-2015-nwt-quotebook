@@ -1,5 +1,89 @@
 <% provide(:title, 'All users') %>
-<h1>All users</h1>
+
+<% if current_user.admin? %>
+<h1>Dashboard</h1>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title center">Top users</h3>
+            </div>
+            <div class="center">
+            	<canvas id="myChart1" width="400" height="400"></canvas>
+            </div>
+            <script>
+                var ctx = document.getElementById("myChart1").getContext("2d");
+                var data = [
+                    {
+                        value: <%= @userPrviBroj %>,
+                        color:"#F7464A",
+                        highlight: "#FF5A5E",
+                        label: "<%= @userPrvoIme %>"
+                    },
+                    {
+                        value: <%= @userDrugiBroj %>,
+                        color: "#46BFBD",
+                        highlight: "#5AD3D1",
+                        label: "<%= @userDrugoIme %>"
+                    },
+                    {
+                        value: <%= @userTreciBroj %>,
+                        color: "#FDB45C",
+                        highlight: "#FFC870",
+                        label: "<%= @userTreceIme %>"
+                    }
+                ];
+                new Chart(ctx).Doughnut(data, {
+                    animateScale: true
+                });
+            </script>
+        </div>
+    </div>
+    
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title center">Top authors</h3>
+            </div>
+            <div class="center">
+            	<canvas id="myChart2" width="400" height="400"></canvas>
+            </div>
+            <script>
+                var ctx = document.getElementById("myChart2").getContext("2d");
+                var data = [
+                    {
+                        value: 300,
+                        color:"#F7464A",
+                        highlight: "#FF5A5E",
+                        label: "Red"
+                    },
+                    {
+                        value: 50,
+                        color: "#46BFBD",
+                        highlight: "#5AD3D1",
+                        label: "Green"
+                    },
+                    {
+                        value: 100,
+                        color: "#FDB45C",
+                        highlight: "#FFC870",
+                        label: "Yellow"
+                    }
+                ];
+                new Chart(ctx).Pie(data, {
+                    animateScale: true
+                });
+            </script>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<% end %>
+
+<h3 class="center">All users</h3>
 
 <%= will_paginate %>
 

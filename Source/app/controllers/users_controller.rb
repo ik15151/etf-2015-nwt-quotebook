@@ -7,6 +7,24 @@ class UsersController < ApplicationController
   def index
     # Umjesto @users = User.all 
     @users = User.paginate(page: params[:page])
+    
+    @niz = []   
+    
+    @users.each do |user|
+      @niz.push({"ime"=>user.name , "broj"=>user.quotes.count})
+    end
+    
+    @niz.sort_by! { |k| k["broj"] }.reverse!
+    
+    @userPrvoIme = @niz[0]["ime"]
+    @userPrviBroj = @niz[0]["broj"]
+    
+    @userDrugoIme = @niz[1]["ime"]
+    @userDrugiBroj = @niz[1]["broj"]
+    
+    @userTreceIme = @niz[2]["ime"]
+    @userTreciBroj = @niz[2]["broj"]
+    
   end
 
   def show
