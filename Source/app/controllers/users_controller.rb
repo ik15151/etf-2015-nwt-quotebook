@@ -8,22 +8,47 @@ class UsersController < ApplicationController
     # Umjesto @users = User.all 
     @users = User.paginate(page: params[:page])
     
-    @niz = []   
+    # Podaci o userima za chart
+    @niz1 = []   
     
     @users.each do |user|
-      @niz.push({"ime"=>user.name , "broj"=>user.quotes.count})
+      @niz1.push({"ime"=>user.name , "broj"=>user.quotes.count})
     end
     
-    @niz.sort_by! { |k| k["broj"] }.reverse!
+    if @niz1.length >= 3
+      @niz1.sort_by! { |k| k["broj"] }.reverse!
+      
+      @userPrvoIme = @niz1[0]["ime"]
+      @userPrviBroj = @niz1[0]["broj"]
+      
+      @userDrugoIme = @niz1[1]["ime"]
+      @userDrugiBroj = @niz1[1]["broj"]
+      
+      @userTreceIme = @niz1[2]["ime"]
+      @userTreciBroj = @niz1[2]["broj"]
+    end
     
-    @userPrvoIme = @niz[0]["ime"]
-    @userPrviBroj = @niz[0]["broj"]
+    # Podaci o autorima za chart
+    @authors = Author.all
     
-    @userDrugoIme = @niz[1]["ime"]
-    @userDrugiBroj = @niz[1]["broj"]
+    @niz2 = []   
     
-    @userTreceIme = @niz[2]["ime"]
-    @userTreciBroj = @niz[2]["broj"]
+    @authors.each do |author|
+      @niz2.push({"ime"=>author.name , "broj"=>author.quotes.count})
+    end    
+    
+    if @niz2.length >= 3
+      @niz2.sort_by! { |k| k["broj"] }.reverse!
+
+      @authorPrvoIme = @niz2[0]["ime"]
+      @authorPrviBroj = @niz2[0]["broj"]
+      
+      @authorDrugoIme = @niz2[1]["ime"]
+      @authorDrugiBroj = @niz2[1]["broj"]
+      
+      @authorTreceIme = @niz2[2]["ime"]
+      @authorTreciBroj = @niz2[2]["broj"]
+    end
     
   end
 
