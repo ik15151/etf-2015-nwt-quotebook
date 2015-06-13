@@ -27,11 +27,26 @@ User.create!(name:  "Ime Prezime",
               activated_at: Time.zone.now)
 end
 
+# Authors
+100.times do
+  name  = Faker::Name.name
+  biography = Faker::Lorem.paragraph(10)
+  Author.create!(name: name,
+                 biography: biography)
+end
+
 # Quotes
-users = User.order(:created_at).take(6)
-50.times do
-  content = Faker::Lorem.sentence(5)
-  users.each { |user| user.quotes.create!(content: content) }
+users = User.order(:created_at).take(40)
+authors = Author.order(:name).take(40)
+30.times do |n|
+  content = Faker::Lorem.paragraph(3)
+  source = Faker::Lorem.sentence(1)
+  comment = Faker::Lorem.paragraph(1)
+  author_id = authors[n].id
+  users.each { |user| user.quotes.create!(content: content,
+                                          source: source,
+                                          comment: comment,
+                                          author_id: author_id) }
 end
 
 # Following relationships
