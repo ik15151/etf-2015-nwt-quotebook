@@ -2,7 +2,7 @@
   <%= render 'shared/error_messages', object: f.object %>  
   <div class="field">
   	<%= f.label :content, "Quote" %>
-    <%= f.text_area :content, class: "form-control", placeholder: "Content" %>
+    <%= f.text_area :content, class: "form-control", placeholder: "Content..." %>
   </div>
   <div id="field">
   	<%= f.label :author, "Author" %>
@@ -10,7 +10,7 @@
   </div>
   <div class="field">
   	<%= f.label :source, "Source" %>
-    <%= f.text_field :source, class: "form-control", placeholder: "Where did you found it?" %>
+    <%= f.text_field :source, class: "form-control", placeholder: "Where did you find it?" %>
   </div>
   <div class="field">
   	<%= f.label :all_tags, "Tags" %>
@@ -22,3 +22,16 @@
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>
+
+<br />
+<br />
+<br />
+
+<div class="tags-cloud glassy-bg panel panel-success">
+  <div class="panel-heading">
+	<h3 class="panel-title center">Tags cloud</h3>
+  </div>
+  <% tag_cloud Tag.counts, %w{css1 css2 css3 css4} do |tag, css_class| %>
+    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+  <% end %>
+</div>
