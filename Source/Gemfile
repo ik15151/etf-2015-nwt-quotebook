@@ -23,6 +23,8 @@ gem 'bootswatch-rails'
 gem 'will_paginate',           '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 
+gem 'angular-ui-bootstrap-rails'
+
 # Chart.js for Rails
 gem 'chart-js-rails'
 
