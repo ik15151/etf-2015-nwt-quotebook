@@ -3,6 +3,11 @@
 <% if current_user.admin? %>
 <h1>Dashboard</h1>
 
+<%= link_to 'Download CSV list', users_path(format: :csv), class: "btn btn-success" %>
+
+<br />
+<br />
+
 <div class="row">
     <div class="col-lg-6">
         <div class="panel panel-primary center">
@@ -10,7 +15,7 @@
                 <h3 class="panel-title center">Top users by number of quotes</h3>
             </div>
             <div class="center">
-            	<canvas id="myChart1" width="400" height="410"></canvas>
+            	<canvas id="myChart1" width="400" height="350"></canvas>
             </div>
             <script>
                 var ctx = document.getElementById("myChart1").getContext("2d");
@@ -47,7 +52,7 @@
                 <h3 class="panel-title center">Top authors by number of quotes</h3>
             </div>
             <div class="center">
-            	<canvas id="myChart2" width="400" height="410"></canvas>
+            	<canvas id="myChart2" width="400" height="350"></canvas>
             </div>
             <script>
                 var ctx = document.getElementById("myChart2").getContext("2d");

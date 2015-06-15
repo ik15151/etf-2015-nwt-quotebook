@@ -28,7 +28,10 @@ User.create!(name:  "Ime Prezime",
 end
 
 # Authors
-100.times do
+Author.create!(name:  "* Unknown",
+               biography: "This is default author.")
+             
+99.times do
   name  = Faker::Name.name
   biography = Faker::Lorem.paragraph(10)
   Author.create!(name: name,

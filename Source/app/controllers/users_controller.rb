@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class UsersController < ApplicationController  
   before_action :logged_in_user, only: [:index, :show, :edit, :update, :destroy,
                                         :following, :followers]
   before_action :correct_user,   only: [:edit, :update]
@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def index
     # Umjesto @users = User.all 
     @users = User.paginate(page: params[:page])
+    @users2 = User.all
     
     # Podaci o userima za chart
     @niz1 = []   
@@ -49,6 +50,14 @@ class UsersController < ApplicationController
       @authorTreceIme = @niz2[2]["ime"]
       @authorTreciBroj = @niz2[2]["broj"]
     end
+    
+    respond_to do |format|
+    format.html
+    format.csv do
+      headers['Content-Disposition'] = "attachment; filename=\"user-list\""
+      headers['Content-Type'] ||= 'text/csv'
+    end
+  end
     
   end
 

@@ -1,0 +1,5 @@
+<%- headers = ['Content', 'Author', 'Source', 'Comment'] -%>
+<%= CSV.generate_line headers %>
+<%- @quotes2.each do |quote| -%>
+  <%= CSV.generate_line([quote.content, Author.find(quote.author_id).name, quote.source, quote.comment]) %>
+<%- end -%>
