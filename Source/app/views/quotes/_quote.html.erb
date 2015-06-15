@@ -3,13 +3,13 @@
   <span class="user"><%= link_to quote.user.name, quote.user %></span>
   <div class="content">
 	  <blockquote>
-	  	<p><%= quote.content %></p>	 	
+	  	<p style="white-space: pre-wrap;"><%= quote.content %></p>	 	
   		<small><b>Author: </b><%= link_to quote.author.try(:name), quote.author %></small>
   		<small><b>Source: </b> <cite title="Source Title"><%= quote.source %></cite></small>
-  		<small><b>Tags: </b><%= raw tag_links(quote.all_tags) %></small>
+  		<%= raw tag_links(quote.all_tags) %>
 	  </blockquote>	  
   </div>
-  <span class="comment"><%= quote.comment %></span>
+  <span class="comment" style="white-space: pre-wrap;"><%= quote.comment %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(quote.created_at) %> ago.
     <% if current_user?(quote.user) %>
