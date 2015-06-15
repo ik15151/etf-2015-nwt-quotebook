@@ -6,11 +6,11 @@
   </div>
   <div id="field">
   	<%= f.label :author, "Author" %>
-  	<%= f.select :author_id, options_for_select(Author.all.map{|a|[a.name, a.id]}), class: "form-control" %>
+  	<%= f.select :author_id, options_for_select(Author.all.map{|a|[a.name, a.id]}), class: "form-control", placeholder: "Who said it?" %>
   </div>
   <div class="field">
   	<%= f.label :source, "Source" %>
-    <%= f.text_field :source, class: "form-control", placeholder: "Where did you find it?" %>
+    <%= f.text_field :source, class: "form-control", placeholder: "Where did you found it?" %>
   </div>
   <div class="field">
   	<%= f.label :all_tags, "Tags" %>
