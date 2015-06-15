@@ -6,7 +6,8 @@
   </div>
   <div id="field">
   	<%= f.label :author, "Author" %>
-  	<%= f.select :author_id, options_for_select(Author.all.map{|a|[a.name, a.id]}), class: "form-control", placeholder: "Who said it?" %>
+  	
+  	<%= f.select(:author_id, options_for_select(Author.all.map{|a|[a.name, a.id]}), {}, { :class => 'form-control' }) %>
   </div>
   <div class="field">
   	<%= f.label :source, "Source" %>
