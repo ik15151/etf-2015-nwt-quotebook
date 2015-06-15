@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get    'contact' => 'static_pages#contact'
   get    'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
+  get    'tags/:tag', to: 'static_pages#home', as: "tag"
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 

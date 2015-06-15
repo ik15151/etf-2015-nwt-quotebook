@@ -6,6 +6,7 @@
 	  	<p><%= quote.content %></p>	 	
   		<small><b>Author: </b><%= link_to quote.author.try(:name), quote.author %></small>
   		<small><b>Source: </b> <cite title="Source Title"><%= quote.source %></cite></small>
+  		<small><b>Tags: </b><%= raw tag_links(quote.all_tags) %></small>
 	  </blockquote>	  
   </div>
   <span class="comment"><%= quote.comment %></span>

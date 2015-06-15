@@ -35,7 +35,7 @@ class QuotesController < ApplicationController
   private
 
     def quote_params
-      params.require(:quote).permit(:content, :source, :comment, :author_id)
+      params.require(:quote).permit(:content, :source, :comment, :author_id, :all_tags)
     end
     
     def correct_user
