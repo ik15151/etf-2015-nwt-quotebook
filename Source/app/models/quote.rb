@@ -8,5 +8,5 @@ class Quote < ActiveRecord::Base
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 3000 }
   validates :source, length: { maximum: 200 }
-  validates :comment, length: { maximum: 5000 }  
+  validates :comment, length: { maximum: 5000 }
 end
