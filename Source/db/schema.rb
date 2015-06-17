@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150615093016) do
+ActiveRecord::Schema.define(version: 20150617035252) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,14 +38,6 @@ ActiveRecord::Schema.define(version: 20150615093016) do
   add_index "quotes", ["author_id"], name: "index_quotes_on_author_id", using: :btree
   add_index "quotes", ["user_id", "created_at"], name: "index_quotes_on_user_id_and_created_at", using: :btree
   add_index "quotes", ["user_id"], name: "index_quotes_on_user_id", using: :btree
-
-  create_table "quotes_tags", id: false, force: :cascade do |t|
-    t.integer "quote_id"
-    t.integer "tag_id"
-  end
-
-  add_index "quotes_tags", ["quote_id"], name: "index_quotes_tags_on_quote_id", using: :btree
-  add_index "quotes_tags", ["tag_id"], name: "index_quotes_tags_on_tag_id", using: :btree
 
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
