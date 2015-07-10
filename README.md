@@ -1,5 +1,7 @@
 # Quotebook
 
+![alt tag](http://i.imgur.com/zBCEKZm.png)
+
 **Opis**
 
 Quotebook je lična kolekcija omiljenih citata. 
@@ -25,9 +27,14 @@ Odlika ove aplikacije jeste da ne dolazi popunjena citatima, već omogućava kor
 
 - Svi: kao izvor inspirativnih i motivacionih izreka značajnih upravo njihovoj ličnosti.
 
+![alt tag](http://i.imgur.com/qxHMfBA.png)
 
 **Dokumentacija:**
 
 https://github.com/ik15151/nwt/wiki/Dokumentacija
+
+**Screenshots:**
+
+https://github.com/ik15151/nwt/tree/master/Documentation/Screenshots
 
 
