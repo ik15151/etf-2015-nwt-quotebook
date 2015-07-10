@@ -10,6 +10,8 @@ Quotebook ima za cilj da olakša sakupljanje (dodavanje), centralizovanje, pretr
 
 Odlika ove aplikacije jeste da ne dolazi popunjena citatima, već omogućava korisniku da pravi vlastitu kolekciju ideja koje se njega tiču.
 
+![alt tag](http://i.imgur.com/rdjXjxH.png)
+
 
 **Ko koristi?**
 
