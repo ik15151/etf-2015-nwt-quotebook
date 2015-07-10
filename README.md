@@ -33,7 +33,7 @@ Odlika ove aplikacije jeste da ne dolazi popunjena citatima, već omogućava kor
 
 **Dokumentacija:**
 
-https://github.com/ik15151/nwt/wiki/Dokumentacija
+https://github.com/ik15151/nwt/tree/master/Documentation
 
 **Screenshots:**
 
