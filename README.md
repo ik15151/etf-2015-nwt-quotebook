@@ -1,6 +1,6 @@
 # Quotebook
 
-![alt tag](http://i.imgur.com/zBCEKZm.png)
+![alt tag](http://i.imgur.com/oNi7UWP.png)
 
 **Opis**
 
