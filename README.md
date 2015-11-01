@@ -1,7 +1,21 @@
-# Quotebook 
+# **Tema:** Quotebook 
 https://qbook.herokuapp.com/
 
 ![alt tag](http://i.imgur.com/oNi7UWP.png)
+
+**Oblast:** Napredne web tehnologije (NWT)
+
+**Vrsta aplikacije:** Web
+
+**Programski jezik:** Ruby
+
+**Alat:** Aptana
+
+**Baza:** PostgreSQL
+
+**Godina:** 2015
+
+*Samostalan rad*
 
 **Opis**
 
