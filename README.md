@@ -19,15 +19,9 @@ https://qbook.herokuapp.com/
 
 **Opis**
 
-Quotebook je lična kolekcija omiljenih citata.
+Quotebook je lična kolekcija omiljenih citata, čija je namjena da olakša sakupljanje, pohranjivanje, centralizovanje, grupisanje, pregled i dijeljenje citata bilo koje vrste: motivacionih izreka poznatih ličnosti, dirljivih izraza djece, podvučenih rečenica iz knjige...
 
-Svaki korisnik odabire u koje svrhe i koje citate želi sačuvati, organizovati, a po želji i podijeliti sa drugima.
-
-Za ljubitelje citata više nema potrebe za slanjem emailova samom sebi, izgubljenih i razasutih stikera, te nepreglednih dokumenata.
-
-Cilj Quotebooka jeste da olakša sakupljanje (dodavanje), centralizovanje, pretragu i pregled citata bilo koje vrste: izreka poznatih ličnosti, dirljivih izraza djece, citata iz stručne literature, podvučenih rečenica iz omiljene knjige...
-
-Odlika ove aplikacije jeste da ne dolazi popunjena citatima, već omogućava korisniku da pravi vlastitu kolekciju ideja koje se njega tiču.
+Posebna odlika ove aplikacije jeste što ne dolazi popunjena citatima, već omogućava korisniku da pravi vlastitu kolekciju ideja koje se njega tiču, za razliku od mnogobrojnih web stranica koje imaju sličnu tematiku.
 
 ![alt tag](http://i.imgur.com/rdjXjxH.png)
 
