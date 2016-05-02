@@ -23,16 +23,6 @@ ActiveRecord::Schema.define(version: 20150617035252) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.string   "color",      null: false
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "categories", ["user_id"], name: "index_categories_on_user_id", using: :btree
-
   create_table "quotes", force: :cascade do |t|
     t.text     "content",    null: false
     t.text     "source"
