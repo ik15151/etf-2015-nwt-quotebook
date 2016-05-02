@@ -1,7 +1,15 @@
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <li id="quote-<%= quote.id %>">
+	
+	
   <%= link_to gravatar_for(quote.user, size: 50), quote.user %>
   <span class="user"><%= link_to quote.user.name, quote.user %></span>
+  	  	
+<!--Izvor: https://richonrails.com/articles/adding-social-sharing-buttons-to-any-site-using-html -->
+<!-- https://developers.facebook.com/docs/sharing/reference/feed-dialog/v2.6#params -->
+<!-- https://developers.facebook.com/docs/sharing/reference/share-dialog -->
   <div class="content">
+  	
 	  <blockquote>
 	  	<p style="white-space: pre-wrap;"><%= quote.content %></p>	 	
   		<small><b>Author: </b><%= link_to quote.author.try(:name), quote.author %></small>
@@ -9,6 +17,7 @@
   		<%= raw tag_links(quote.all_tags) %>
 	  </blockquote>	  
   </div>
+
   <span class="comment" style="white-space: pre-wrap;"><%= quote.comment %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(quote.created_at) %> ago.
@@ -18,5 +27,20 @@
        · 
       <%= link_to "Edit", edit_quote_path(quote) %>
     <% end %>
-  </span>
+    <span class="share">
+	    <!-- Twitter -->
+		<a href="http://twitter.com/home?status=<%= quote.content %> - https%3A%2F%2Fqbook.herokuapp.com" title="Twitter" target="_blank" class="btn-twitter"><i class="fa fa-twitter"></i> </a>
+	</span>	
+	<span class="share">
+		<!-- Facebook "http://www.facebook.com/sharer.php?u=https%3A%2F%2Fqbook.herokuapp.com&name=<%= quote.content %>" -->
+		<a href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fqbook.herokuapp.com&title=Quotebook&picture=http://i.imgur.com/uApTjT0.jpg&caption=Collect%20quotes%20that%20matter&quote=<%= quote.content %>" 
+		title="Facebook" target="_blank" class="btn-facebook"><i class="fa fa-facebook"></i> </a>
+	</span>
+	<span class="share">
+		<!-- Email -->
+		<a href="mailto:?Subject=Quote&amp;Body=<%= quote.content %> - https%3A%2F%2Fqbook.herokuapp.com" title="Email" target="_blank" class="btn-envelope"><i class="fa fa-envelope"></i> </a>
+	</span>	
+   </span>
+   
+   
 </li>

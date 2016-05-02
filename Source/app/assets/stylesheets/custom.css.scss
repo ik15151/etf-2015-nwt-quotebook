@@ -323,6 +323,18 @@ input {
     margin-left: 60px;
     margin-top: 15px;
   }
+  .share {
+    margin-left: 20px;
+    margin-top: 60px;    
+  }
+  .share2 {
+    display: block;
+    margin-left: 0px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
   .gravatar {
     float: left;
     margin-right: 10px;
