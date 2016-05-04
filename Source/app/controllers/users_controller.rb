@@ -4,10 +4,19 @@ class UsersController < ApplicationController
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
   
+  autocomplete :user, :name, :full => true
+  
   def index
     # Umjesto @users = User.all 
     @users = User.paginate(page: params[:page])
     @users2 = User.all
+    
+    @users3 = User.all
+    if params[:search]
+      @users3 = User.search(params[:search])
+    else
+      @users3 = User.paginate(page: params[:page])
+    end
     
     # Podaci o userima za chart
     @niz1 = []   

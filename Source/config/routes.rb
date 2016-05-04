@@ -21,9 +21,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   
   resources :users do
+    get :autocomplete_user_name, :on => :collection
     member do
       get :following, :followers
     end
+    
   end
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
