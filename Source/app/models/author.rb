@@ -5,4 +5,9 @@ class Author < ActiveRecord::Base
   
   validates :name, presence: true, length: { maximum: 100 }
   validates :biography, length: { maximum: 3000 }
+  
+  def self.search(search)
+    where("name ILIKE ?", "%#{search}%")  
+  end
+
 end

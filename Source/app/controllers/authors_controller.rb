@@ -3,9 +3,19 @@ class AuthorsController < ApplicationController
   #before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
   
+  autocomplete :author, :name, :full => true
+  # https://github.com/peterwillcn/rails4-autocomplete
+  
   def index
     # Umjesto @authors = Author.all 
     @authors = Author.paginate(page: params[:page])
+    
+    @authors2 = Author.all
+    if params[:search]
+      @authors2 = Author.search(params[:search])
+    else
+      @authors2 = Author.paginate(page: params[:page])
+    end
   end
 
   def show

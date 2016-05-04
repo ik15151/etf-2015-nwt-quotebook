@@ -29,7 +29,10 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :quotes,              only: [:create, :edit, :update, :destroy]
   resources :relationships,       only: [:create, :destroy]
-  resources :authors
+  resources :authors do
+    get :autocomplete_author_name, :on => :collection
+  end
+  # https://github.com/peterwillcn/rails4-autocomplete
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
