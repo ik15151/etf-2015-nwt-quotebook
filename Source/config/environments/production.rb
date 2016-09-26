@@ -71,7 +71,7 @@ Rails.application.configure do
     :port           => '587',
     :authentication => :plain,
     :user_name      => 'etfqbook',
-    :password       => 'etfqbookpass',
+    :password       => 'etfqbookpassword',
     :domain         => 'gmail.com',
     :enable_starttls_auto => true
   } 
