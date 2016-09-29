@@ -3,88 +3,38 @@
 <% if current_user.admin? %>
 <h1>Dashboard</h1>
 
-<%= link_to 'Download CSV list', users_path(format: :csv), class: "btn btn-success" %>
+<%= link_to 'Download CSV list', users_path(format: :csv), class: "btn btn-default" %>
 
 <br />
 <br />
+
+<% end %>
 
 <div class="row">
-    <div class="col-lg-6">
-        <div class="panel panel-primary center">
+	<div class="col-lg-6">
+        <div class="panel panel-success center">
+            <div class="panel-heading">
+                <h3 class="panel-title center">Number of registrated users per month</h3>
+            </div>
+            <div class="panel-body">
+				<%= line_chart User.group_by_month(:activated_at).count, label: "Registrated", library: { colors: ['#18BC9C', '#95A5A6'], crosshair: { trigger: 'both', color: '#95A5A6' }} %>
+			</div>
+        </div>
+    </div>
+	
+		
+	<div class="col-lg-6">
+        <div class="panel panel-success center">
             <div class="panel-heading">
                 <h3 class="panel-title center">Top users by number of quotes</h3>
             </div>
-            <div class="center">
-            	<canvas id="myChart1" width="400" height="350"></canvas>
-            </div>
-            <script>
-                var ctx = document.getElementById("myChart1").getContext("2d");
-                var data = [
-                    {
-                        value: <%= @userPrviBroj %>,
-                        color:"#F7464A",
-                        highlight: "#FF5A5E",
-                        label: "<%= @userPrvoIme %>"
-                    },
-                    {
-                        value: <%= @userDrugiBroj %>,
-                        color: "#46BFBD",
-                        highlight: "#5AD3D1",
-                        label: "<%= @userDrugoIme %>"
-                    },
-                    {
-                        value: <%= @userTreciBroj %>,
-                        color: "#FDB45C",
-                        highlight: "#FFC870",
-                        label: "<%= @userTreceIme %>"
-                    }
-                ];
-                new Chart(ctx).Doughnut(data, {
-                    animateScale: true                    
-                });
-            </script>
+            <div class="panel-body">
+				<%= column_chart ({@userPrvoIme => @userPrviBroj, @userDrugoIme => @userDrugiBroj, @userTreceIme => @userTreciBroj}), label: "Quotes", library: { colors: ['#18BC9C', '#95A5A6'], opacity: '0.2'} %>
+			</div>
         </div>
     </div>
-    
-    <div class="col-lg-6">
-        <div class="panel panel-primary center">
-            <div class="panel-heading">
-                <h3 class="panel-title center">Top authors by number of quotes</h3>
-            </div>
-            <div class="center">
-            	<canvas id="myChart2" width="400" height="350"></canvas>
-            </div>
-            <script>
-                var ctx = document.getElementById("myChart2").getContext("2d");
-                var data = [
-                    {
-                        value: <%= @authorPrviBroj %>,
-                        color:"#F7464A",
-                        highlight: "#FF5A5E",
-                        label: "<%= @authorPrvoIme %>"
-                    },
-                    {
-                        value: <%= @authorDrugiBroj %>,
-                        color: "#46BFBD",
-                        highlight: "#5AD3D1",
-                        label: "<%= @authorDrugoIme %>"
-                    },
-                    {
-                        value: <%= @authorTreciBroj %>,
-                        color: "#FDB45C",
-                        highlight: "#FFC870",
-                        label: "<%= @authorTreceIme %>"
-                    }
-                ];
-                new Chart(ctx).Pie(data, {
-                    animateScale: true                    
-                });
-            </script>
-        </div>
-    </div>
-</div>
 
-<% end %>
+</div>
 
 <h1>Users</h1>
 

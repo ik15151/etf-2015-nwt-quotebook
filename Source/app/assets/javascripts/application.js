@@ -15,5 +15,5 @@
 //= require jquery-ui
 //= require autocomplete-rails
 //= require bootstrap
-//= require Chart
+//= require chartkick
 //= require_tree .
